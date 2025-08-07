@@ -1,0 +1,210 @@
+D365_TC_001 – Create a New Lead and Convert to Opportunity
+• Module: Leads / Opportunities
+• Type: Positive
+• Precondition: User is logged in as Sales Rep
+• Steps:
+1. Navigate to Leads
+2. Click “New Lead”
+3. Fill in valid lead details (name, company, email)
+4. Save lead
+5. Click “Qualify” to convert to Opportunity
+• Expected Result: Lead is saved and successfully converted; Opportunity is created with linked data
+• Description: Ensures proper lead creation and seamless conversion to an opportunity.
+
+D365_TC_002 – Edit an Existing Lead
+• Module: Leads
+• Type: Positive
+• Precondition: At least one lead exists
+• Steps:
+1. Search for an existing lead
+2. Click to open record
+3. Edit phone number and job title
+4. Click Save
+• Expected Result: Lead information is updated successfully
+• Description: Confirms lead details can be edited and saved correctly.
+
+D365_TC_003 – Create Contact and Link to Company
+• Module: Contacts
+• Type: Positive
+• Precondition: User is logged in; Company record exists
+• Steps:
+1. Go to Contacts > New
+2. Enter contact name, email, and phone
+3. Select existing Company
+4. Save
+• Expected Result: Contact is created and linked to the selected company
+• Description: Verifies proper creation and association of contacts with accounts.
+
+D365_TC_004 – Filter and Update Contact Record
+• Module: Contacts
+• Type: Positive
+• Precondition: Several contacts exist
+• Steps:
+1. Use filter to search for contact by name
+2. Open record
+3. Update phone number
+4. Save
+• Expected Result: Contact record is updated; filters work correctly
+• Description: Confirms search, filter, and edit functionality.
+
+D365_TC_005 – Move Deal Through Pipeline
+• Module: Deals
+• Type: Positive
+• Precondition: Deal exists in "Qualification" stage
+• Steps:
+1. Open deal
+2. Move to “Proposal” → “Negotiation” → “Closed Won”
+• Expected Result: Deal moves through all stages without error
+• Description: Ensures pipeline progression works as expected.
+
+D365_TC_006 – Log Activities on a Deal
+• Module: Deals
+• Type: Positive
+• Precondition: Open deal exists
+• Steps:
+1. Navigate to the deal
+2. Add a note
+3. Log a phone call
+4. Assign a follow-up task
+• Expected Result: All activities are recorded and appear in timeline
+• Description: Validates activity logging and timeline functionality.
+
+D365_TC_007 – Trigger Workflow from Contact Update
+• Module: Workflows
+• Type: Positive
+• Precondition: Workflow is set to trigger on status = “Engaged”
+• Steps:
+1. Open a contact
+2. Change status to “Engaged”
+3. Save
+• Expected Result: Email is sent automatically via workflow
+• Description: Ensures automation triggers on expected event.
+
+D365_TC_008 – View Sales Dashboard as Manager
+• Module: Dashboards
+• Type: Positive
+• Precondition: User is logged in as Manager
+• Steps:
+1. Navigate to Dashboards
+2. Open “Sales Performance”
+3. Apply filter for “This Month”
+• Expected Result: Dashboard loads with accurate data and working filters
+• Description: Confirms dashboard visibility and accuracy.
+
+D365_TC_009 – Search for a Lead by Email
+• Module: Leads
+• Type: Positive
+• Precondition: Lead with email exists
+• Steps:
+1. Use global search with email address
+• Expected Result: Lead record appears in results
+• Description: Tests search functionality with email field.
+
+D365_TC_010 – Assign Contact to Sales Rep
+• Module: Contacts
+• Type: Positive
+• Precondition: Contact exists
+• Steps:
+1. Open contact
+2. Assign to a Sales Rep using the “Owner” field
+3. Save
+•	Expected Result: Contact is assigned and owner field reflects change
+• Description: Confirms ownership assignment functionality.
+
+D365_TC_011 – Create Lead Without Email
+• Module: Leads
+• Type: Negative
+• Precondition: User is logged in
+• Steps:
+1. Create a new lead
+2. Leave email field blank
+3, Click Save
+• Expected Result: Validation error appears; lead is not saved
+• Description: Ensures email field is required.
+
+D365_TC_012 – Enter Invalid Email for Contact
+• Module: Contacts
+• Type: Negative
+• Precondition: None
+• Steps:
+1. Create new contact
+2. Enter “invalid_email” in the email field
+3. Click Save
+• Expected Result: Email validation error is shown
+• Description: Tests form validation for email format.
+
+D365_TC_013 – Move Deal Without Required Fields
+• Module: Deals
+• Type: Negative
+• Precondition: Deal in early stage
+• Steps:
+1. Try to move deal to “Closed Won”
+2. Leave “Estimated Revenue” blank
+• Expected Result: Error message or validation popup appears
+• Description: Ensures required fields are enforced.
+
+D365_TC_014 – Trigger Workflow with Wrong Status
+• Module: Workflows
+• Type: Negative
+• Precondition: Automation expects “Engaged” status
+• Steps:
+1, Change contact status to “Inactive”
+2. Save
+• Expected Result: No workflow triggered
+• Description: Validates that automation doesn't trigger on wrong input.
+
+D365_TC_015 – Assign Deal to Inactive User
+• Module: Deals
+• Type: Negative
+• Precondition: Inactive user exists
+• Steps:
+1. Open a deal
+2. Assign to inactive user
+3. Save
+• Expected Result: Error shown or assignment blocked
+• Description: Prevents assignment to deactivated users.
+
+D365_TC_016 – Delete Contact Without Permission
+• Module: Contacts
+• Type: Negative
+• Precondition: User has read-only access
+• Steps:
+1. Try to delete contact
+• Expected Result: Access denied or action blocked
+• Description: Tests role-based permissions.
+
+D365_TC_017 – View Dashboard with No Data
+• Module: Dashboards
+• Type: Negative
+• Precondition: No data for selected time range
+• Steps:
+1. Filter dashboard for a future date range
+• Expected Result: Empty state shown or “No data available” message
+• Description: Ensures clean UI when no data is present.
+
+D365_TC_018 – Save Contact Without Required Fields
+• Module: Contacts
+• Type: Negative
+• Precondition: User logged in
+• Steps:
+1. Try to save new contact without name
+• Expected Result: Error message shown
+• Description: Validates required field enforcement.
+
+D365_TC_019 – Link Contact to Nonexistent Company
+• Module: Contacts
+• Type: Negative
+• Precondition: No matching company exists
+• Steps:
+1. Try to link contact to manually typed company name not in database
+• Expected Result: Error or warning shown
+• Description: Prevents linking to invalid records.
+
+D365_TC_020 – Create Lead with Duplicate Email
+• Module: Leads
+• Type: Negative
+• Precondition: Lead with same email already exists
+• Steps:
+1. Create new lead with duplicate email
+• Expected Result: Warning or error about duplication
+• Description: Validates uniqueness constraints.
