@@ -1,0 +1,47 @@
+Project Name:
+Microsoft Dynamics 365 CRM – Manual Testing (Customer Perspective)
+Prepared by:
+Andreja Mihajlovski
+Date: July 9, 2025
+Testing Period: July 4, 2025 – July 9, 2025
+
+1. Project Description
+This project focuses on manual testing of Microsoft Dynamics 365 CRM modules, simulating real-world customer use cases. Testing is executed from the perspective of Sales Representatives, Admins and Managers, validating core CRM
+functionalities such as Contacts, Leads, Opportunities, Deals, Workflows, and Dashboards. The primary goal is to ensure the system behaves reliably, meets business expectations and offers a seamless experienceto end users. Testing
+is conducted manually through the UI with structured documentation of test cases, outcomes  and any discovered defects.
+
+2. Test Objectives
+• Verify the functionality and reliability of key CRM modules
+• Identify defects, usability issues, and edge-case failures
+• Simulate real-life workflows from end-user roles
+• Ensure readiness of the system for internal or external use
+
+3. Scope of Testing
+In Scope:
+• Contacts – Creation, editing, and management
+• Leads / Opportunities – Conversion flows and data integrity
+• Deals / Pipelines – Movement and stage tracking
+• Workflows / Automations – Triggered actions and logic validation
+• Dashboards / Reports – Data visibility and accuracy
+Out of Scope:
+• Back-end integrations (e.g., API testing)
+• Custom code/scripts
+• Automated test cases
+
+4. Test Approach
+• Manual testing only
+• UI-based execution
+• Role-based simulation (Sales Rep, Admin, Manager)
+• Tests written and executed from customer-centric scenarios
+• Structured bug reporting and documentation
+
+5. Roles & Responsibilities
+Name	Role	Responsibility
+Andreja Mihajlovski	QA Tester	Writing test cases, executing tests, reporting bugs and documenting results
+
+6. Deliverables
+• Test Plan Document
+• Test Scenarios & Test Cases (20 total)
+• Bug Reports (for all failed tests)
+• Test Summary Report
+• Test Closure Report
