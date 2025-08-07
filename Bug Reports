@@ -1,0 +1,148 @@
+Bug Report #1
+Bug ID: BUG_D365_001
+Title: System allows lead creation without an email address
+Module: Leads
+Reported By: Andreja Mihajlovski
+Date: July 9, 2025
+Severity: Medium
+Status: Open
+Description:
+During manual testing, it was discovered that the system allows a Sales Rep to create and save a lead without entering a valid email address, even though the email field should be mandatory.
+Steps to Reproduce:
+1. Log in as a Sales Rep
+2. Navigate to Leads
+3. Click “New Lead”
+4. Leave the Email field empty
+5. Fill in all other required fields (Name, Company, etc.)
+6. Click Save
+Expected Result:
+System should display a validation error and prevent the lead from being saved without an email address.
+Actual Result:
+Lead is saved successfully without an email, bypassing expected validation.
+
+Bug Report #2
+Bug ID: BUG_D365_002
+Title: Invalid email format accepted in Contact form
+Module: Contacts
+Severity: Medium
+Description:
+System allows saving a contact with incorrectly formatted email (e.g., test@invalid) without showing an error.
+Steps to Reproduce:
+1. Create a new contact
+2. Enter “test@invalid” as email
+3. Click Save
+Expected Result: Error displayed for invalid email
+Actual Result: Contact saved without validation error
+
+Bug Report #3
+Bug ID: BUG_D365_003
+Title: Deal can progress stages without required fields
+Module: Deals
+Severity: High
+Description:
+A deal can be moved to "Closed Won" stage even if critical fields like “Estimated Revenue” are left blank.
+Steps to Reproduce:
+1. Open a deal
+2. Leave Estimated Revenue blank
+3. Move to "Closed Won"
+4. Save
+Expected Result: Validation error prevents move
+Actual Result: Deal progresses without required info
+
+Bug Report #4
+Bug ID: BUG_D365_004
+Title: Workflow triggers incorrectly on status change
+Module: Workflows
+Severity: Low
+Description:
+Workflow is expected to trigger on "Engaged" status only. However, no trigger occurs, or it triggers incorrectly with other statuses.
+Steps to Reproduce:
+1. Update a contact’s status to "Inactive"
+2. Save the record
+Expected Result: No email workflow triggered
+Actual Result: Workflow triggers incorrectly OR does not trigger at all when "Engaged" is selected
+
+Bug Report #5
+Bug ID: BUG_D365_005
+Title: System allows deal assignment to inactive user
+Module: Deals
+Severity: Medium
+Description:
+Inactive users can still be selected in the “Owner” dropdown and assigned to deals.
+Steps to Reproduce:
+1. Open a deal
+2. Assign to inactive user
+3. Save
+Expected Result: Assignment blocked; warning shown
+Actual Result: Assignment accepted with no validation
+
+Bug Report #6
+Bug ID: BUG_D365_006
+Title: Contact deletion allowed without permission
+Module: Contacts
+Severity: High
+Description:
+Users with read-only permissions can still see the delete option and attempt to delete contact records.
+Steps to Reproduce:
+1. Log in as read-only user
+2. Open contact
+3. Attempt to delete
+Expected Result: Action blocked or button hidden
+Actual Result: Delete action available and may proceed
+
+Bug Report #7
+Bug ID: BUG_D365_007
+Title: Dashboard does not handle empty data properly
+Module: Dashboards
+Severity: Low
+Description:
+When filtering dashboards for future or empty date ranges, no “No Data” message is shown — just a blank screen.
+Steps to Reproduce:
+1. Open Sales Dashboard
+2. Filter for future date range
+3. Observe result
+Expected Result: Message like “No data available” appears
+Actual Result: Blank screen with no feedback
+
+Bug Report #8
+Bug ID: BUG_D365_008
+Title: System allows saving contact without name
+Module: Contacts
+Severity: Medium
+Description:
+A contact can be saved without entering a name field — which should be required.
+Steps to Reproduce:
+1. Go to Contacts
+2. Click New
+3. Leave Name field blank
+4. Save
+Expected Result: Validation error shown
+Actual Result: Contact saved
+
+Bug Report #9
+Bug ID: BUG_D365_009
+Title: Contact can be linked to non-existent company
+Module: Contacts
+Severity: Low
+Description:
+When typing in a random string as company name (not matched to any Account), system allows it without verification or warning.
+Steps to Reproduce:
+1. Create a contact
+2. Enter “FakeCorpXYZ” in company field
+3. Save
+Expected Result: Error shown or record lookup required
+Actual Result: Fake company accepted with no prompt
+
+Bug Report #10
+Bug ID: BUG_D365_010
+Title: System does not detect duplicate lead emails
+Module: Leads
+Severity: High
+Description:
+Duplicate lead creation is allowed even when email already exists in the system.
+Steps to Reproduce:
+1. Create a lead with email test@example.com
+2. Create another lead with same email
+3. Save
+Expected Result: Error or duplication warning
+Actual Result: Both leads saved without error
