@@ -1,0 +1,47 @@
+1. Lead Creation and Conversion to Opportunity
+• Module: Leads / Opportunities
+• Role: Sales Representative
+Description:
+A Sales Rep creates a new lead using valid customer information (name, email, company, etc.). After qualifying the lead, the rep converts it into an Opportunity. The scenario ensures all data is carried over properly and the lead status is updated accordingly.
+
+2. Edit and Update an Existing Lead
+• Module: Leads
+• Role: Sales Representative
+Description:
+The Sales Rep searches for an existing lead, opens the record, and updates details like job title, phone number, or lead source. The changes are saved and tracked in the lead's activity history or audit log.
+
+3. Create a New Contact and Associate with a Company
+• Module: Contacts
+• Role: Sales Representative
+Description:
+The Sales Rep manually adds a new contact by entering valid data (name, email, role) and links the contact to an existing company (Account). The scenario validates required fields, email format, and proper relationship linkage between contact and account.
+
+4. Search, Filter, and Edit a Contact Record
+• Module: Contacts
+• Role: Sales Representative
+Description:
+The user uses the global search or contact list filters (e.g., by name or status) to find a contact. Once located, the contact is edited (e.g., updated phone number or tagging a category). Verifies if filters work and the updates save correctly.
+
+5. Move a Deal Across Pipeline Stages
+• Module: Deals / Opportunities
+• Role: Sales Representative
+Description:
+The Rep selects a deal and moves it through pipeline stages (e.g., Qualification → Proposal → Negotiation → Closed Won). Each stage transition may require certain fields (like estimated revenue or close date). The system should enforce validations and save changes.
+
+6. Add Activities to a Deal Record
+• Module: Deals
+• Role: Sales Representative
+Description:
+A Rep logs different types of interactions under a deal: call notes, follow-up tasks, or emails. The scenario confirms that each activity is correctly attached to the deal and appears in the timeline or activity feed.
+
+7. Trigger Workflow on Contact Status Change
+• Module: Workflows / Automations
+• Role: Admin or Sales Rep
+Description:
+When a contact’s status is changed to “Engaged,” an email workflow is triggered to send a welcome or next-step email. This scenario validates the automation rules are correctly set up and executed, with email sent as expected.
+
+8. Access and Analyze the Sales Dashboard
+• Module: Dashboards / Reports
+• Role: Sales Manager
+Description:
+The Manager opens the Sales Dashboard to review pipeline volume, conversion rates, and lead sources. The scenario ensures that charts load properly, filters (like by date range or team) work, and data displayed is accurate and updated.
