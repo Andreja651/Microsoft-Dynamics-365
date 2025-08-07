@@ -1,0 +1,50 @@
+Project: Microsoft Dynamics 365 CRM – Manual Testing
+Tester: Andreja Mihajlovski
+Testing Period: July 4 – July 9, 2025
+Date of Report: July 9, 2025
+
+1. Summary of Testing Activities
+Manual testing was conducted across core CRM modules in Microsoft Dynamics 365, focusing on real-world scenarios from a customer (sales rep/admin) perspective. All test cases were executed manually via the user interface without automation.
+
+ 2. Scope of Testing
+Modules covered:
+• Leads
+• Contacts
+• Deals / Opportunities
+• Workflows / Automations
+• Dashboards / Reports
+
+3. Test Results
+Metric                    Value
+Test Cases Designed       20
+Test Cases Executed       20
+Test Cases Passed         10
+Test Cases Failed         10
+Bug Reports Logged        10
+Retests Required          Yes (post-fix)
+
+4. Bug Summary
+A total of 10 bugs were logged across 5 modules. Key issues involved:
+• Missing validation on forms (e.g., email, required fields)
+• Workflow misfires or lack of automation triggers
+• Role-based access problems (e.g., delete permissions)
+• Improper handling of duplicate records
+• UX gaps like blank dashboards and error messaging
+
+ 5. Lessons Learned
+• Manual testing from a user perspective helped uncover real usability and data integrity issues
+• Reusing a test structure from a previous project (HubSpot) allowed faster documentation and smoother process
+• Importance of enforcing validation and permissions in complex systems like D365 was reinforced
+
+ 6. Deliverables
+• Test Plan
+• Test Scenarios
+• Test Cases (20)
+• Test Summary Report
+• Bug Reports (10)
+• This Test Closure Report
+
+7. Closure Confirmation
+Testing activities have been completed for this cycle. All bugs have been documented, and next actions depend on dev fixes and retesting.
+Signed Off By: Andreja Mihajlovski
+Date: July 9, 2025
